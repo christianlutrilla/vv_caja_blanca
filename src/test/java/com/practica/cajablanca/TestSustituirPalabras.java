@@ -18,17 +18,27 @@ public class TestSustituirPalabras {
         this.editor = new Editor();
     }
 
+    //Test para el camino 2
     @Test
     public void emptySustituirPalabra(){
         editor.sustituirPalabra("Tortilla francesa", "Tortilla española");
         assertEquals(comprobarPalabra(editor), comprobarPalabra(new Editor()));
     }
 
+    //Test para el camino 3
     @Test
     public void emptyListsSustituirPalabra(){
         editor.leerFichero("FicheroLeerVacioConVariosSaltosDeLinea.txt");
         editor.sustituirPalabra("Tortilla francesa", "Tortilla española");
         assertEquals(comprobarPalabra(editor), comprobarPalabra(new Editor()));
+    }
+
+    //Test para el camino 5
+    @Test
+    public void SustituirAlgunaPalabra(){
+        editor.leerFichero("FicheroParaLeer.txt");
+        editor.sustituirPalabra("personas", "estudiantes");
+        assertEquals(comprobarPalabra(editor), "BuenosdíasatodaslasestudiantespresentesMealegracomunicarlesquetodoslosdíasapartirdeahoravanaserpresencialesSéqueosencantaelnuevocambioperonohacefaltaqueosemocionéistantoAsíquedeestaformaahoratodosfelizmentevaisatenerqueasistiraclasetodoslosdíasAdiósatodaslasestudiantesquehabéisasistido");
     }
 
     public String comprobarPalabra(Editor editor)  {
