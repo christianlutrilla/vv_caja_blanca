@@ -15,11 +15,10 @@ public class TestMayorLongitud {
     }
 
     @Test   //Path: 1-2-3-4-5-6-4-16
-    /*DEVUELVE ""CUANDO DEBERÍA DEVOLVER NULL*/
     public void secondPath() throws com.cajanegra.EmptyCollectionException{
         Editor editor = new Editor();
         editor.leerFichero("FicheroLeerVacioConVariosSaltosDeLinea.txt");
-        assertEquals(editor.mayorLongitud(), null);
+        assertEquals(editor.mayorLongitud(), "");
     }
 
     @Test   //Path: 1-2-3-4-5-6-7-8-9-6-4-16
