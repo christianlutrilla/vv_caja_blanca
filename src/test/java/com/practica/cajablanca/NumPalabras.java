@@ -44,7 +44,7 @@ public class NumPalabras {
     public void PathFive(){
         Editor editor = new Editor();
         editor.leerFichero("FicheroParaLeer.txt");
-        assertEquals(0, editor.numPalabras(1, 10, "hola");
+        assertEquals(0, editor.numPalabras(1, 10, "hola"));
 
     }
 
@@ -52,7 +52,7 @@ public class NumPalabras {
     public void PathSix(){
         Editor editor = new Editor();
         editor.leerFichero("FicheroParaLeer.txt");
-        assertEquals(2, editor.numPalabras(1, 30, "día");
+        assertEquals(2, editor.numPalabras(1, 30, "día"));
 
     }
 }
