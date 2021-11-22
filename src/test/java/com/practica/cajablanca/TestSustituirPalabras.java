@@ -33,12 +33,28 @@ public class TestSustituirPalabras {
         assertEquals(comprobarPalabra(editor), comprobarPalabra(new Editor()));
     }
 
-    //Test para el camino 5
+    //Test para el camino 4
     @Test
     public void SustituirAlgunaPalabra(){
         editor.leerFichero("FicheroParaLeer.txt");
         editor.sustituirPalabra("personas", "estudiantes");
         assertEquals(comprobarPalabra(editor), "BuenosdíasatodaslasestudiantespresentesMealegracomunicarlesquetodoslosdíasapartirdeahoravanaserpresencialesSéqueosencantaelnuevocambioperonohacefaltaqueosemocionéistantoAsíquedeestaformaahoratodosfelizmentevaisatenerqueasistiraclasetodoslosdíasAdiósatodaslasestudiantesquehabéisasistido");
+    }
+
+    //Test para el camino 5
+    @Test
+    public void NOSustituirAlgunaPalabra(){
+        editor.leerFichero("FicheroParaLeer.txt");
+        editor.sustituirPalabra("payasos", "estudiantes");
+        assertEquals(comprobarPalabra(editor), "BuenosdíasatodaslaspersonaspresentesMealegracomunicarlesquetodoslosdíasapartirdeahoravanaserpresencialesSéqueosencantaelnuevocambioperonohacefaltaqueosemocionéistantoAsíquedeestaformaahoratodosfelizmentevaisatenerqueasistiraclasetodoslosdíasAdiósatodaslaspersonasquehabéisasistido");
+    }
+
+    //Test para el camino 6
+    @Test
+    public void NOSustituirUnaPalabra(){
+        editor.leerFichero("UnaLinea.txt");
+        editor.sustituirPalabra("payasos", "estudiantes");
+        assertEquals(comprobarPalabra(editor), "Buenosdíasatodaslaspersonaspresentes.");
     }
 
     public String comprobarPalabra(Editor editor)  {
