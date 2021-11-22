@@ -57,6 +57,12 @@ public class TestSustituirPalabras {
         assertEquals(comprobarPalabra(editor), "Buenosdíasatodaslaspersonaspresentes.");
     }
 
+    public void SustituiruNAPalabra(){
+        editor.leerFichero("UnaLinea.txt");
+        editor.sustituirPalabra("personas", "estudiantes");
+        assertEquals(comprobarPalabra(editor), "Buenosdíasatodaslasestudiantespresentes.");
+    }
+
     public String comprobarPalabra(Editor editor)  {
 
         String s = "";
